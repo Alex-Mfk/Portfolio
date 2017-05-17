@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browser = require("browser-sync").create();
 
-
 var paths = {
     js : './js/**/*.js',
     jsdir : './js',
@@ -21,7 +20,6 @@ var paths = {
 };
 
 gulp.task ('clean', function () {
-	// body...
 	del.sync([
 			paths.jsdir,
 			paths.cssdir
