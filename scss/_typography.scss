@@ -39,6 +39,7 @@ body {
 .h5 {
   font-family: "Open Sans";
   font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .h6 {
@@ -53,11 +54,11 @@ p {
 a {
   font-family: "Open Sans";
   font-size: 1.8rem;
-  color: $green;
+  color: $prime;
   text-decoration: underline;
-
+  
   &:hover {
     text-decoration: none;
-    color: $green;
+    color: $prime;
   }
 }
