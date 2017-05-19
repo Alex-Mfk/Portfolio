@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browser = require("browser-sync").create();
 
-
 var paths = {
     js : './js/**/*.js',
     jsdir : './js',
@@ -20,24 +19,23 @@ var paths = {
     html: './**/*.html'
 };
 
-gulp.task ('clean', function () {
-	// body...
-	del.sync([
-			paths.jsdir,
-			paths.cssdir
-		]);
-});    
+gulp.task('clean', function () {
+    del.sync([
+        paths.jsdir,
+        paths.cssdir
+    ]);
+});
 
-gulp.task('sass:dev', function(){
+gulp.task('sass:dev', function () {
     return gulp.src(paths.scss)
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-        sourceComments:'normal'
-    }).on('error', sass.logError))
-    .pipe(size({showFile: true}))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.cssdir))
-    .pipe(browser.stream())
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            sourceComments: 'normal'
+        }).on('error', sass.logError))
+        .pipe(size({ showFiles: true }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.cssdir))
+        .pipe(browser.stream());
 });
 
 gulp.task('sass:prod', function () {
@@ -72,10 +70,10 @@ gulp.task('watch', function () {
         }
     });
 
-    gulp.watch(paths.scss, ['sass:dev'])
-    gulp.watch(paths.script, ['js:dev'])
-    gulp.watch([paths.html, paths.js]).on('change', browser.reload)
-})
+    gulp.watch(paths.scss, ['sass:dev']);
+    gulp.watch(paths.script, ['js:dev']);
+    gulp.watch([paths.html, paths.js]).on('change', browser.reload);
+});
 
 gulp.task('default', ['clean', 'js:dev', 'sass:dev', 'watch']);
 gulp.task('prod', ['clean', 'js:prod', 'sass:prod']);
