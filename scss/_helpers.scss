@@ -105,6 +105,11 @@
     color: $second;
   }
 }
+.thirdTint {
+  &.thirdTint {
+    color: $thirdTint;
+  }
+}
 
 // Background Colors
 // -------------------------
@@ -136,6 +141,11 @@
 .bg-third {
   &.bg-third {
     background-color: $third;
+  }
+}
+.bg-thirdTint {
+  &.bg-thirdTint {
+    background-color: $thirdTint;
   }
 }
 
