@@ -10,10 +10,19 @@
 .flex{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .flex-item{
 	padding: 1rem;
 	max-width: 400px;
+}
+.flex-menu{
+	padding: 1rem;
+	max-width: 200px;
+	list-style-type: none;
+
+}
+.fa-color{
+	color: $thirdTint;
 }

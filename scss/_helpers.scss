@@ -49,6 +49,12 @@
   display: inline-block;
 }
 
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 // Aligning Elements
 // -------------------------
 
@@ -182,4 +188,8 @@
 
 .mb-10 {
   margin-bottom: 10rem;
+}
+
+.mt-10 {
+  margin-top: 1rem;
 }

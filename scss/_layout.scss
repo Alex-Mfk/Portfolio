@@ -2,7 +2,7 @@
 // Layouts and containers
 // ---------------------------
 
-div, p, section, footer, header, aside {
+div, p, section, footer, header, aside, %icon {
   box-sizing: border-box;
 }
 
@@ -30,27 +30,5 @@ div, p, section, footer, header, aside {
 
 .circle {
   border-radius: 50%;
-  height: 10rem;
-}
-
-%icon {
-  height: 40px;
-  width:40px;
-  background: url("/img/spriteIcon.png") no-repeat;
-}
-.mail{
-  @extend %icon;
-  background-position: -53px -50px;
-}
-.git{
-@extend %icon;
-  background-position: -455px -50px;
-}
-.fb{
-@extend %icon;
-  background-position: -225px -50px;
-}
-.skp{
-@extend %icon;
-  background-position: -283px -50px;
+  height: 1rem;
 }
